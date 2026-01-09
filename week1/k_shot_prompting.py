@@ -10,9 +10,9 @@ NUM_RUNS_TIMES = 5
 
 YOUR_SYSTEM_PROMPT = """ Here are some examples for how we typically reverse the order of letters in a given word: 
 <example> given word = "awesome", the reversed word is "emosewa" </example> 
-<example> given word = "learning", the reversed word is "gninrael" </example> 
-<example> given word = "pleasesucceed", the reversed word is "deeccusesaelp" </example> 
-<example> given word = "beautifugirl", the reversed word is "lrigufituaeb" </example> 
+<example> given word = "computer", the reversed word is "retupmoc" </example> 
+<example> given word = "mountain", the reversed word is "niatnuom" </example> 
+<example> given word = "research", the reversed word is "hcraeser" </example> 
 <example> given word = "strongwind", the reversed word is "dniwgnorts" </example> 
 <example> given word = "powerfulwords", the reversed word is "sdrowlufrewop" </example> 
 """
