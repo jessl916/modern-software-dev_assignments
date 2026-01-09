@@ -37,7 +37,14 @@ QUESTION = (
 
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """You are an expert Python developer. Your task is to write clean, correct Python code based on the provided context and requirements.
+Follow these rules:
+1. Use ONLY the information provided in the context
+2. Include all necessary imports
+3. Follow the exact function signature requested
+4. Implement proper error handling
+5. Output your code in a Python fenced code block (```python)
+6. Do not add explanations outside the code block"""
 
 
 # For this simple example
@@ -56,7 +63,7 @@ def YOUR_CONTEXT_PROVIDER(corpus: List[str]) -> List[str]:
 
     For example, return [] to simulate missing context, or [corpus[0]] to include the API docs.
     """
-    return []
+    return [corpus[0]] if corpus else []
 
 
 def make_user_prompt(question: str, context_docs: List[str]) -> str:
