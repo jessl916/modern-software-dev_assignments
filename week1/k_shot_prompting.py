@@ -8,10 +8,12 @@ NUM_RUNS_TIMES = 5
 
 # TODO: Fill this in!
 YOUR_SYSTEM_PROMPT = """ You reverse letters in words like the following examples: 
-<example> input: "cat", steps: c-a-t -> t-a-c, output: "tac" </example> 
-<example> input: "awesome", steps: a-w-e-s-o-m-e -> e-m-o-s-e-w-a, output: "emosewa" </example> 
 <example> given word = "researchers", steps: r-e-s-e-a-r-c-h-e-r-s -> s-r-e-h-c-r-a-e-s-e-r, the reversed word is "srehcraeser" </example> 
 """
+# <example> input: "cat", steps: c-a-t -> t-a-c, output: "tac" </example>
+# <example> given word = "python", steps: p-y-t-h-o-n -> n-o-h-t-y-p, the reversed word is "nohtyp" </example> 
+# <example> input: "awesome", steps: a-w-e-s-o-m-e -> e-m-o-s-e-w-a, output: "emosewa" </example> 
+
 
 USER_PROMPT = """
 Reverse the order of letters in the following word. Only output the reversed word, no other text:
