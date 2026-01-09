@@ -70,7 +70,18 @@ TOOL_REGISTRY: Dict[str, Callable[..., str]] = {
 # ==========================
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = ""
+YOUR_SYSTEM_PROMPT = """You are a helpful assistant that can call tools to help users.
+
+Available tool:
+- output_every_func_return_type: Lists all top-level function names and their return types from a Python file.
+
+When calling a tool, respond with ONLY a JSON object in this exact format:
+{
+  "tool": "tool_name",
+  "args": {"param_name": "param_value"}
+}
+
+Do not include any other text, explanations, or markdown formatting."""
 
 
 def resolve_path(p: str) -> str:
