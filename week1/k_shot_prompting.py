@@ -7,17 +7,11 @@ load_dotenv()
 NUM_RUNS_TIMES = 5
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = """ 
+YOUR_SYSTEM_PROMPT = """ You are an assistant that reserves the order of the letters in words: 
+<example> input: "cat", output: "tac" </example> 
+<example> input: "awesome", output: "emosewa" </example> 
+<example> given word = "research", the reversed word is "hcraeser" </example> 
 """
-
-# YOUR_SYSTEM_PROMPT = """ Here are some examples for how we typically reverse the order of letters in a given word: 
-# <example> given word = "awesome", the reversed word is "emosewa" </example> 
-# <example> given word = "computer", the reversed word is "retupmoc" </example> 
-# <example> given word = "mountain", the reversed word is "niatnuom" </example> 
-# <example> given word = "research", the reversed word is "hcraeser" </example> 
-# <example> given word = "strongwind", the reversed word is "dniwgnorts" </example> 
-# <example> given word = "powerfulwords", the reversed word is "sdrowlufrewop" </example> 
-# """
 
 USER_PROMPT = """
 Reverse the order of letters in the following word. Only output the reversed word, no other text:
