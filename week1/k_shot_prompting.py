@@ -8,18 +8,13 @@ NUM_RUNS_TIMES = 5
 
 # TODO: Fill this in!
 
-# YOUR_SYSTEM_PROMPT = """ Reverse the order of letters in the following word. Only output the reversed word, no other text. 
-# Here are some examples for how we reverse the order of letters in a given word: 
-# <example> given word = "mine", the reversed word is "enim" </example> 
-# """
-
-YOUR_SYSTEM_PROMPT = """ Reverse the order of letters in the following word. Only output the reversed word, no other text. 
-Here are some examples for how we reverse the order of letters in a given word: 
-<example> given word = "mine", the reversed word is "enim" </example> 
+YOUR_SYSTEM_PROMPT = """ Here are some examples for how we typically reverse the order of letters in a given word: 
+<example> given word = "awesome", the reversed word is "emosewa" </example> 
 <example> given word = "learning", the reversed word is "gninrael" </example> 
 <example> given word = "pleasesucceed", the reversed word is "deeccusesaelp" </example> 
 <example> given word = "beautifugirl", the reversed word is "lrigufituaeb" </example> 
 <example> given word = "strongwind", the reversed word is "dniwgnorts" </example> 
+<example> given word = "powerfulwords", the reversed word is "sdrowlufrewop" </example> 
 """
 
 USER_PROMPT = """
