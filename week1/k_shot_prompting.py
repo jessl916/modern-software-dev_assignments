@@ -7,10 +7,10 @@ load_dotenv()
 NUM_RUNS_TIMES = 5
 
 # TODO: Fill this in!
-YOUR_SYSTEM_PROMPT = """ You are an assistant that reserves the order of the letters in words: 
-<example> input: "cat", output: "tac" </example> 
-<example> input: "awesome", output: "emosewa" </example> 
-<example> given word = "research", the reversed word is "hcraeser" </example> 
+YOUR_SYSTEM_PROMPT = """ You reverse letters in words like the following examples: 
+<example> input: "cat", steps: c-a-t -> t-a-c, output: "tac" </example> 
+<example> input: "awesome", steps: a-w-e-s-o-m-e -> e-m-o-s-e-w-a, output: "emosewa" </example> 
+<example> given word = "researchers", steps: r-e-s-e-a-r-c-h-e-r-s -> s-r-e-h-c-r-a-e-s-e-r, the reversed word is "srehcraeser" </example> 
 """
 
 USER_PROMPT = """
