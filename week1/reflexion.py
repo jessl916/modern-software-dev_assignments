@@ -15,7 +15,7 @@ Keep the implementation minimal.
 """
 
 # TODO: Fill this in!
-YOUR_REFLEXION_PROMPT = """Fix the code based on test failures. Reflect and revise codes as needed."""
+YOUR_REFLEXION_PROMPT = """You will fix the code based on test failures. Reflect and revise codes as needed. Be thorough and ensure all validation rules are properly implemented."""
 
 
 # Ground-truth test suite used to evaluate generated code
@@ -96,9 +96,23 @@ def your_build_reflexion_context(prev_code: str, failures: List[str]) -> str:
 
     Return a string that will be sent as the user content alongside the reflexion system prompt.
     """
-    failures_text = "\n".join(failures)
-    return f"Previous code:\n```python\n{prev_code}\n```\n\nFailures:\n{failures_text}\n\nFix the code."
+    failure_block = "\n".join(f"  - {f}" for f in failures)
+    return f"""The following code failed some tests:
+    ```python
+    {prev_code}
+    ```
+    Test failures:
+    {failure_block}
 
+    Please fix the code to pass all tests. The function should validate:
+    - Length >= 8 characters
+    - Contains at least one lowercase letter
+    - Contains at least one uppercase letter  
+    - Contains at least one digit
+    - Contains at least one special character from: !@#$%^&*()-_
+    - Contains no whitespace
+
+    Output the corrected function in a Python code block."""
 
 def apply_reflexion(
     reflexion_prompt: str,
