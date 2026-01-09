@@ -15,7 +15,9 @@ Keep the implementation minimal.
 """
 
 # TODO: Fill this in!
-YOUR_REFLEXION_PROMPT = """You will fix the code based on test failures. Reflect and revise codes as needed. Be thorough and ensure all validation rules are properly implemented."""
+YOUR_REFLEXION_PROMPT = """
+You will fix the code based on test failures. Reflect and revise codes as needed. Be thorough and ensure all validation rules are properly implemented.
+"""
 
 
 # Ground-truth test suite used to evaluate generated code
